@@ -11,7 +11,6 @@ function App() {
       <Header />
       <Home />
       <Section />
-      Hello world
     </div>
   );
 }

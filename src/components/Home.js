@@ -5,7 +5,7 @@ import Section from './Section'
 function home() {
     return (
         <Container>
-            <Section />
+            <Section/>
         </Container>
     )
 }
