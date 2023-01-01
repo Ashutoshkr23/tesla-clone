@@ -1,13 +1,13 @@
 import React from 'react'
 import styled from 'styled-components'
-
-function Section() {
+{/*we can pass the value by two ways one that is used other we cqn unpack it like :- function setion ({title ,description , etc }) in this cas we dont have to write props.title we can dircetly use title*/}
+function Section({title, description , backgroundImg}) {
     return (
-        <Wrap>
+        <Wrap bgImage={backgroundImg}>
 
             <Itemtext>
-                <h1>Model S</h1>
-                <p>Schedule a Demo Drive</p>
+                <h1>{title}</h1>
+                <p>{description}</p>
             </Itemtext>
             <Buttongroup>
             <Buttons>
@@ -41,6 +41,7 @@ display: flex;
 flex-direction: column;
 justify-content: space-between;
 align-items: center;
+background-image: ${props => `url("/images/${props.bgImage}")`}
 `
 
 const Itemtext = styled.div`
