@@ -11,4 +11,9 @@ function Section() {
 
 export default Section
 
-const Wrap = styled.div``
+const Wrap = styled.div`
+width: 100vw;
+height: 100vh;
+
+background-image: url('/public/images/model-s.jpg)
+`
