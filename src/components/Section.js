@@ -1,7 +1,7 @@
 import React from 'react'
 import styled from 'styled-components'
 {/*we can pass the value by two ways one that is used other we cqn unpack it like :- function setion ({title ,description , etc }) in this cas we dont have to write props.title we can dircetly use title*/}
-function Section({title, description , backgroundImg}) {
+function Section({ title, description, backgroundImg, leftBtnText, rightBtnText }) {
     return (
         <Wrap bgImage={backgroundImg}>
 
@@ -12,11 +12,13 @@ function Section({title, description , backgroundImg}) {
             <Buttongroup>
             <Buttons>
                 <LeftButton>
-                    Custom Order
+                    {leftBtnText}
                 </LeftButton>
-                <RightButton>
-                    Existing Order
-                </RightButton>
+                    {rightBtnText && <RightButton>
+                        {rightBtnText}
+                    </RightButton>}
+
+                
                 <DownArrow src="/images/down-arrow.svg" alt="down" />
             </Buttons>
             </Buttongroup>
@@ -56,14 +58,14 @@ margin-bottom:30px;
 `
 
 const RightButton = styled.div`
-background-color: rgba(23, 26, 32, 0.8);
+background:white;
 height: 40px;
 width:256px;
-color: white;
+color: black;
 display: flex;
 justify-content: center;
 align-items: center;
-border-radius: 20px;
+border-radius: 10px;
 opacity: 0.85;
 padding: 10px; 
 text-transform: uppercase;
@@ -72,9 +74,9 @@ margin: 12px;
 ` 
 
 const LeftButton = styled(RightButton)`
-background:white;
-opacity: 0.65;
-color:black;
+background:black;
+opacity: 0.9;
+color:white;
 `
 
 const DownArrow = styled.div`
